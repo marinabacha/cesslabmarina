@@ -36,7 +36,7 @@ class ResultsWaitPage(WaitPage):
             group = self.group
             players = group.get_players()
             contributions = [p.contribution for p in players if p.role == Constants.WEALTHY]
-            group.contribution = sum(contributions)
+            group.contribution = float(sum(contributions))
             for player in players:
                 if player.role == Constants.WEALTHY:
                     # Phase 1 Payment Calculation
@@ -50,7 +50,7 @@ class ResultsWaitPage(WaitPage):
                         subsidy = Constants.phase_two_subsidy
                         endowment = Constants.endowment
                         contribution = float(player.contribution)
-                        player.payoff = float(endowment - contribution + subsidy*contribution)
+                        player.payoff = endowment - contribution + subsidy*contribution
                 # Poor Player
                 else:
                     if self.round_number == Constants.phase_one_round and self.round_number < Constants.phase_two_round:

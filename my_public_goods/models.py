@@ -42,12 +42,12 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    contribution = models.FloatField()
+    contribution = models.DecimalField()
 
 
 class Player(BasePlayer):
     role = models.IntegerField(default=0)
-    ideal = models.FloatField(min=0, max=Constants.ideal_max)
-    contribution = models.FloatField(min=0, max=Constants.endowment)
+    ideal = models.DecimalField(min=0, max=Constants.ideal_max)
+    contribution = models.DecimalField(min=0, max=Constants.endowment)
 
 
