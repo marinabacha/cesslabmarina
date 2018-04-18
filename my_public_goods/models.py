@@ -42,7 +42,7 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    contribution = models.CurrencyField()
+    contribution = models.FloatField()
 
 
 class Player(BasePlayer):
