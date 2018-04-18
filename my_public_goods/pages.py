@@ -43,19 +43,19 @@ class ResultsWaitPage(WaitPage):
                     if self.round_number == Constants.phase_one_round and self.round_number<Constants.phase_two_round:
                         subsidy = Constants.phase_one_subsidy
                         endowment = Constants.endowment
-                        contribution = float(player.contribution)
+                        contribution = player.contribution
                         player.payoff = endowment +(subsidy*contribution)-contribution
                     # Phase 2 Payment Calculation
                     else:
                         subsidy = Constants.phase_two_subsidy
                         endowment = Constants.endowment
-                        contribution = float(player.contribution)
+                        contribution = player.contribution
                         player.payoff = endowment - contribution + subsidy*contribution
                 # Poor Player
                 else:
                     if self.round_number == Constants.phase_one_round and self.round_number < Constants.phase_two_round:
                         cost = Constants.phase_one_cost
-                        player.payoff = float(group.contribution)*(1-cost)
+                        player.payoff = (group.contribution)*(1-cost)
                     else:
                         cost = Constants.phase_two_cost
                         player.payoff = group.contribution*(1-cost)
