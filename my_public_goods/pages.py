@@ -44,7 +44,7 @@ class ResultsWaitPage(WaitPage):
                         subsidy = Constants.phase_one_subsidy
                         endowment = Constants.endowment
                         contribution = player.contribution
-                        player.payoff = endowment - contribution + subsidy*contribution
+                        player.payoff = endowment +(subsidy*contribution)-contribution
                     # Phase 2 Payment Calculation
                     else:
                         subsidy = Constants.phase_two_subsidy

@@ -18,7 +18,7 @@ class Constants(BaseConstants):
     players_per_group = 4
 
     multiplier = 1
-    num_rounds = 20
+    num_rounds = 4
 
     phase_one_round = 1
     phase_two_round = num_rounds/2
@@ -47,7 +47,7 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     role = models.IntegerField(default=0)
-    ideal = models.CurrencyField(min=0, max=Constants.ideal_max)
-    contribution = models.CurrencyField(min=0, max=Constants.endowment)
+    ideal = models.FloatField(min=0, max=Constants.ideal_max)
+    contribution = models.FloatField(min=0, max=Constants.endowment)
 
 
