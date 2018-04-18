@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+<p> The randomly chosen round from which real payoffs will be derived is {{random_round }}.</p>
+     <p>Your profit is therefore {{ final_pay }}.</p>
+
+
+</p>
+
+    {% next_button %}
+{% endblock %}
+
+

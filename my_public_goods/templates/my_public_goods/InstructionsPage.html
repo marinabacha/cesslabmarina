@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+Instructions
+{% endblock %}
+
+{% block content %}
+<p>
+     This is an experiment regarding decision making.
+In every round of the experiment your task will be to decide how much of an amount of money given to you at the beginning of the round to allocate to a public good and how much to keep yourself. You will be matched with three other subjects and in your group of four there will be 3 subjects of type A and 1 of Type B. Your type will be randomly determined each round. If you are a Type A player at the beginning of a round, you will be given an endowment of laboratory money called Experimental Currency Units (ECU’s) to allocate between a public good (charity) and yourself. For every ECU you keep, your payoff goes up by one unit so that if you keep __ units to yourself, your payoff increases by that amount. However, you can also allocate some of your ECU’s to a public good.  If you decide to contribute towards the public good, then you will receive a subsidy from the government (more information under “Phase 1 tax setup”).If subject i of type A allocates xi to the public goods then the total amount of the public good created will be PG = (x1 +x2 +x3)(1-α)  , where x1 +x2 +x3  is the sum contributions made by the  three Type-A subjects in the group  and (1-α) is fraction of what is collected that the charity has to distribute. All the money collected will be paid to the Type-B subject; who has no endowment. Hence, if you are a Type B player in the experiment, you will not take any action in a given round but rather you will just be paid PG, the amount allocated to the public good net of administrative costs. Your payoff as a Type A player is simply what you keep for yourself and the subsidy received. Your payoff as a Type-B subject is what is given to you from the charity.
+
+ For this experiment, you will receive a monetary payment which will be derived from your performance. After the experiment is completed, one round will be randomly selected. We will take your monetary payoff and convert it dollars on a rate of 1 ECU - $___. Note that while you know your type in any given round, since a round will be randomly chosen for payoffs at the end of the experiment, you will not know whether you will be an A or B type subject in the payoff relevant round. Your type will randomly reassigned between rounds.
+
+<p><b>Phase 1 tax setup</b>:
+
+In this phase of the experiment there will be 10 rounds.  For each round in this phase individuals of type A who decide to contribute towards the public good will receive a 20% subsidy over the amount contributed. This means that if you have been assigned type A for a round and donate x, you will receive 0.2x back. Your payoff for that round will then be the amount of the endowment you keep plus 0.2x. Furthermore, for this phase, when you contrinute to the public good only 80% of what you contribute will be available to be redistriubyted to the subject of Type B. In other words, this means that in the public good provision formula α is equal to 20%. This means that charities will provide the public good according to the function PG = (x1 +x2 +x3)(1-0.20). </p>
+
+
+
+
+  {% next_button %}
+{% endblock %}

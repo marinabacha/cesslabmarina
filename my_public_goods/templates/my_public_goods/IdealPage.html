@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+  Expected Contributions
+{% endblock %}
+
+{% block content %}
+<p>
+    Before we start the simulation, think about what you expect the total contribution towards the charitable good to be.
+    In other words, how much you think that as a society, you will give up from your individual endowments to help the poor individual?
+    Reminder: There are 3 individuals who will receive $100 of endowment this round, setting the maximum amount to be donated to $300.
+</p>
+  {% formfield player.ideal label="What do you think will be the total contribution towards the charitable good?" %}
+  {% next_button %}
+{% endblock %}

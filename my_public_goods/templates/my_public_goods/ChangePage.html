@@ -1,0 +1,12 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}New Tax Setup{% endblock %}
+
+{% block content %}
+  <p>
+     Starting in round 11, individuals of type A who decide to contribute towards the public good, will receive a 40% subsidy over the amount contributed. This means that if you have been assigned type A for a round and donate x, you will receive 0.40x back from the government. Your payoff for that round will then be the amount of the endowment you keep plus 0.40x. Furthermore, for this phase, charities’ administrative cost has risen and thus α is equal to 30%. This means that charities will provide the public good according to the function PG = (x1 +x2 +x3)(1-0.30). The experiment will continue as normal, only these rates have changed.
+
+  </p>
+  {% next_button %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Contribution
+{% endblock %}
+
+{% block content %}
+<p>For this round, you have received an endowment of 100.
+{% formfield player.contribution label="How much will you donate?" %}
+
+</p>
+
+    {% next_button %}
+{% endblock %}
+
+
