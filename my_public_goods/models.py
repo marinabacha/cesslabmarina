@@ -42,12 +42,12 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    contribution = models.DecimalField()
+    contribution = models.DecimalField(decimal_places=2,max_digits=10)
 
 
 class Player(BasePlayer):
     role = models.IntegerField(default=0)
-    ideal = models.DecimalField(min=0, max=Constants.ideal_max)
-    contribution = models.DecimalField(min=0, max=Constants.endowment)
+    ideal = models.DecimalField(min=0, max=Constants.ideal_max,decimal_places=2,max_digits=10)
+    contribution = models.DecimalField(min=0, max=Constants.endowment,decimal_places=2,max_digits=10)
 
 
