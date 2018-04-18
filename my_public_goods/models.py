@@ -18,7 +18,7 @@ class Constants(BaseConstants):
     players_per_group = 4
 
     multiplier = 1
-    num_rounds = 2
+    num_rounds = 20
 
     phase_one_round = 1
     phase_two_round = num_rounds/2
