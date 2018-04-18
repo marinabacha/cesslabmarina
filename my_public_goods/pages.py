@@ -55,7 +55,7 @@ class ResultsWaitPage(WaitPage):
                 else:
                     if self.round_number == Constants.phase_one_round and self.round_number < Constants.phase_two_round:
                         cost = Constants.phase_one_cost
-                        player.payoff = group.contribution*(1-cost)
+                        player.payoff = float(float(group.contribution)*(1-cost))
                     else:
                         cost = Constants.phase_two_cost
                         player.payoff = group.contribution*(1-cost)

@@ -29,8 +29,8 @@ class Constants(BaseConstants):
     phase_one_subsidy = 0.20
     phase_two_subsidy = 0.40
 
-    endowment = 100
-    ideal_max = 300
+    endowment = 100.00
+    ideal_max = 300.00
 
     POOR = 1
     WEALTHY = 2
