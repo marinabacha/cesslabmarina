@@ -10,7 +10,7 @@ import otree.settings
 # e.g. self.session.config['participation_fee']
 
 SESSION_CONFIG_DEFAULTS = {
-    'real_world_currency_per_point': 1.00,
+    'real_world_currency_per_point': 0.3,
     'participation_fee': 0.00,
     'doc': "",
 }
@@ -33,6 +33,7 @@ LANGUAGE_CODE = 'en'
 # e.g. EUR, GBP, CNY, JPY
 REAL_WORLD_CURRENCY_CODE = 'USD'
 USE_POINTS = True
+POINTS_DECIMAL_PLACES = 2
 
 ROOMS = [
     {
