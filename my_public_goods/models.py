@@ -47,7 +47,7 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     role = models.IntegerField(default=0)
-    ideal = models.CurrencyField(min=0, max=Constants.ideal_max)
-    contribution = models.CurrencyField(min=0, max=Constants.endowment)
+    ideal = models.FloatField(min=0, max=Constants.ideal_max)
+    contribution = models.FloatField(min=0, max=Constants.endowment)
 
 
